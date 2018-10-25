@@ -18,7 +18,7 @@ For best user experience use Google Chrome v69.0.
 Clone the `mars-rovers` repository using git:
 
 ```
-git clone https://github.com/angular/mars-rovers.git
+git clone https://github.com/divyaInWonderland/mars-rovers.git
 cd mars-rovers
 ```
 
