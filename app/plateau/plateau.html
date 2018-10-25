@@ -1,0 +1,53 @@
+<div ng-controller="PlateauCtrl">
+    <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3"></div>
+        <div class="col-xs-6 col-sm-6 col-md-6" style="background:white">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12" style="background:white">
+                    <br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12" style="background:white">
+                    <label>Enter rover landing and movement details</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-sm-10 col-md-10" style="background:white">
+                    <textarea ng-model="inputExpedition" class="form-control rounded-0" rows="5"></textarea>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2" style="background:white">
+                    <button type="button" class="btn" ng-click="startMission()">Go</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12" style="background:white">
+                    <br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-8" style="background:white">
+                    <div style="position:relative;">
+                        <img id="rocket_n" src="/images/RoverN.png" style="display:none;">
+                        <img id="rocket_s" src="/images/RoverS.png" style="display:none;">
+                        <img id="rocket_w" src="/images/RoverW.png" style="display:none;">
+                        <img id="rocket_e" src="/images/RoverE.png" style="display:none;">
+                        <canvas id="plateau" width="500" height="500" style="border:2px solid"></canvas>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4" style="background:white">
+                    <label>Output final position</label>
+                    <div ng-repeat="roverPos in roversPosArr">
+                        {{roverPos.getFullPosition()}}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12" style="background:white">
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3"></div>
+    </div>
+</div>
